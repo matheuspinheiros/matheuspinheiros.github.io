@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Portfolio Website</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfólio</a>
+
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#services">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contact">Contato</a>
+            <a href="#about">Sobre</a>
+        </div>
+
+        <div class="nav-responsive">
+            <a href="#home">Home</a>
+            <a href="#services">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contact">Contato</a>
+            <a href="#about">Sobre</a>
+        </div>
+
+        <div class="menu-hamburguer">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Olá, meu nome é </h3>
+            <h1>Matheus Pinheiro dos Santos</h1>
+            <h3>Studant Full-Stack <span>Developer</span> and <span>Musician</span></h3>
+            <br>
+            <p>
+                Sou um estudante de progamação Full-Stack, Tendo projetos de conhecimento tanto em front-end quanto em back-end,
+                minha linguagem de preferência é Java e JavaScript, porém consigo me virar em qualquer linguagem pois tenho uma 
+                ótima noção de Lógica de progamação e matemática
+            </p>
+
+            <div class="social-media">
+                <a href="https://github.com/matheuspinheiros" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/matheus-pinheiro-dos-santos-4792a3248/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BcJGIemsRTieGM29jRjPPaA%3D%3D" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matheus.santos24@univille.br" target="_blank"><i class='bx bxl-gmail'></i></a>
+            </div>
+
+            <div>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="images/foto-perfil.png" alt="Profile picture">
+        </div>
+    </section>
+    <!-- /home section -->
+
+    <!-- service section -->
+     <section class="services" id="services">
+        <h2>Meus <span>Serviços</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+
+                <p>
+                    Tenho um bom conhecimento de HTML, CSS e JavaScript para desenvolver um WebSite, observa-se pelo próprio site do portfolio,
+                    feito por mim mesmo, com base em HTML, estilizações e animações feitos com Css e com algumas funções em JavaScript, 
+                    sendo assim consigo tanto desenvolver quanto revisar e resolver problemas com esta parte,
+                    támbem faço serviços privados como freelancer para websites, tudo dependendo do desejo do cliente.
+                </p>
+
+                <a class="btn">Leia Mais</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-code-curly' ></i>
+                <h3>Back-end Development</h3>
+
+                <p>
+                    Minha parte favorita da progamação, tenho muita afinidade com Java e Spring Framework, consigo desenvolver uma Api REST completa
+                    com todas as medidas de segurança necessárias para o serviço desejado, com requisições HTTP funcionando perfeitamente, conexão com banco de dados,
+                    criptografia de senhas, JWT Token, e se necessário consigo me adaptar a linguagem usada, tendo em vista consigo fazer o mesmo serviço completo em Python
+                    se necessário.
+                </p>
+
+                <a class="btn">Leia Mais</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-cloud'></i>
+                <h3>Cloud e Metodologias Ágeis</h3>
+
+                <p>
+                    Sei desenvolver em nuvem, estou fazendo o preparatório para prova de AWS Cloud Foundations na faculdade porém tenho conhecimento de Docker,
+                    consigo me adaptar a Metodologias ágeis como Kanbam, Scrum, github, Jira entre outros, tudo para favorecer um ótimo trabalho em equipe 
+                    da forma mais ágil possível.
+                </p>
+
+                <a class="btn">Leia Mais</a>
+            </div>
+        </div>
+     </section>
+    <!-- /service section -->
+
+    <!-- portfolio section -->
+    <section class="portfolio" id="portfolio">
+        <h2>Ultimos <span>Projetos</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/Print1.png" alt="Portfolio 1">
+
+                <div class="portfolio-layer">
+                    <h4>API REST em Java e Spring Boot</h4>
+
+                    <p>
+                        API Dicionário de Logística, com cadastro de usuários, requisições GET, POST, PUT e DELETE funcionando 
+                        perfeitamente, contém banco de dados, metodos de segurança e documentação swagger, 
+                        botão abaixo contém link para o repositório GITHUB
+                    </p>
+
+                    <a href="https://github.com/matheuspinheiros/api-dicionario" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/Print-Security.png" alt="Portfolio 2">
+
+                <div class="portfolio-layer">
+                    <h4>Security Config</h4>
+
+                    <p>
+                        Configuração de segurança da Api REST, com Spring Security, JWT Token e criptografia de senhas,
+                        contém filtros de segurança com authenticação e autorização, utiliza UserDTO para transferência dos dados de usuários
+                        de uma forma mais segura, também contém dois perfis sendo um para usuários e outro para administradores.
+                    </p>
+
+                    <a href="https://github.com/matheuspinheiros/api-dicionario/blob/main/src/main/java/com/matheus/todosimple/config/SecurityConfig.java" target="_blank">
+                        <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="images/Print2.png" alt="Portfolio 3">
+
+                <div class="portfolio-layer">
+                    <h4>Documentação Swagger</h4>
+
+                    <p>
+                        A API REST contém toda a documentação Swagger necessária com todos os endpoints setados da forma correta
+                    </p>
+
+                    <a href="https://github.com/matheuspinheiros/api-dicionario" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /portfolio section -->
+
+    <!-- contact section -->
+    <section class="contact" id="contact">
+        <h2>Entre em contato <span>Comigo!</span></h2>
+
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" id="name" name="name" placeholder="Nome Completo" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="phone" name="phone" placeholder="Telefone" required>
+                <input type="text" id="subject" name="subject" placeholder="Assunto">
+            </div>
+
+            <textarea id="message" name="message" cols="30" rows="8" placeholder="Fale mais sobre o que deseja fazer." required></textarea>
+
+            <button type="submit" class="btn">Envie a messagem</button>
+        </form>
+    </section>
+    <!-- /contact section -->
+
+    <!-- about section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/foto_perfil_2.png" alt="Sobre Mim">
+        </div>
+
+        <div class="about-content">
+            <h3>Sobre Mim</h3>
+            <h1><span>Desenvolvedor</span> Full-Stack</h1>
+            
+            <p>
+                Agradeço sua atenção até aqui, este site foi feito com muito carinho para ser uma rápida apresentação do meu trabalho
+                , se houver interesse da sua parte, entre em contato comigo pelo formulário acima ou pelos links da pagina home, diga em qual serviço está interessado 
+                , quais seus objetivos e eu te retornarei um e-mail com a resposta, acredito que juntos podemos fazer muito melhor, não deixe para amanhã o que você pode fazer hoje.
+            </p>
+
+            <a href="#contact" class="btn">Mande uma mensagem</a>
+        </div>
+    </section>
+    <!-- /about section -->
+
+    <footer>
+        <p>Copyright &copy; 2023 by &lt;/Matheus dos Santos&gt;. All rights Reserverd.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
