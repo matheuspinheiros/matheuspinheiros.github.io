@@ -1,0 +1,316 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+:root {
+    --font-principal: 'Open Sans', sans-serif;
+    --bg-color: #fafafad0;
+    --color01: #444;
+    --color02: #37a1f7;
+    --color03: #ddd;
+    --color04: #07060648;
+}
+.dark {
+    --bg-color: #1c1c1c;
+    --color01: #fafafa;
+    --color03: #37a1f7;
+}
+a {
+    text-decoration: none;
+    color: var(--color01);
+    transition: .3s;
+}
+a:hover {color: var(--color02);}
+ul {list-style: none;}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--color01);
+    font-family: var(--font-principal);
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    border-bottom: 2px solid var(--color01);
+}
+header #navbar-container, 
+header #navbar-inner,
+header #navbar #navbar-list,
+header #darkmode-container {display: flex;}
+header #navbar-container {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1280px;
+}
+header #navbar-inner {align-items: center; gap: 2.5rem;}
+header #navbar #navbar-list {gap: 1rem;}
+header #darkmode-container {
+    background-color: var(--color03);
+    width: 65px;
+    height: 25px;
+    padding: .5rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos gerais - para telas maiores */
+header #icon-menu,
+header #close-menu {
+  display: none; /* Esconde o ícone de menu em telas maiores */
+}
+
+header #navbar-inner {
+  display: flex; /* Mostra o menu em telas maiores */
+  justify-content: space-between;
+}
+
+header #darkmode-container i {
+    background-color: var(--color04);
+    font-size: 1.2rem;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translatey(-50%);
+    cursor: pointer;
+    outline: 1px solid var(--color03);
+    animation: slide-back .3s;
+}
+header #darkmode-container .fa-moon {display: none;}
+@keyframes slide-in {
+    from {left: 0;}
+    to {left: 50%;}
+}
+@keyframes slide-back {
+    from {left: 50%;}
+    to {left: 0;}
+}
+  .dark header #darkmode-container i {
+    animation: slide-in .3s forwards; 
+    background-color: var(--bg-color);
+    color: var(--color02);
+}
+  .dark header #darkmode-container .fa-moon {display: block;}
+  .dark header #darkmode-container .fa-sun {display: none;}
+
+/* Principal */
+
+#container {
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 2rem 0;
+    display: flex;
+    gap: 3rem;
+  }
+#container #post-container {flex: 3 1 0;}
+#post-container .post {margin-bottom: 2.5rem;}
+#post-container .post img {
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.post .title,
+.post .description,
+.post .artista {margin-bottom: 1rem;}
+.post .title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.post .artista {font-weight: 600;}
+.post .escute {
+    display: inline-block;
+    background-color: var(--color02);
+    color: var(--bg-color);
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 600;
+}
+  .post .escute:hover {color: var(--color01);}
+  .dark .post .escute:hover {color: var(--color01);}
+
+  .post a {
+    margin-right: 10px; 
+    text-decoration: none;
+    color: #000; 
+    font-size: 1.2rem; 
+}
+/* Spotify */
+.post a i {
+    font-size: 1.8rem; 
+    color: #1DB954; 
+}
+
+/* Estilo  Deezer */
+.post a:nth-child(3) i {
+    color: #4A3C3C;
+}
+
+/* Barra lateral */
+
+#side-bar {flex: 1 1 0;}
+#side-bar #search-bar,
+#side-bar #categories,
+#side-bar #tags {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color03);
+  border-radius: 8px;
+}
+#side-bar #tags {
+  position: sticky;
+  top: 1rem;
+}
+#side-bar #search-bar h4,
+#side-bar #categories h4,
+#side-bar #tags h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+#search-bar form {
+  display: flex;
+  gap: .5rem;
+}
+#search-bar form input {
+  padding: .7rem 1rem;
+  border: 1px solid var(--color03);
+}
+#search-bar form input[type="text"]:focus {
+  outline: 0;
+  border-color: var(--color04);
+}
+#search-bar form input[type="submit"] {
+  background-color: var(--color02);
+  color: var(--bg-color);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  transition: .3s;
+}
+#search-bar form input[type="submit"]:hover {color: var(--color01);}
+#categories li {margin-top: .7rem;}
+#tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#tags-container a {
+  padding: .5rem 1rem;
+  text-align: center;
+  background-color: var(--color03);
+  border-radius: 8px;
+}
+.dark #tags-container a:hover {color: var(--bg-color);}
+
+/* Sobre nós */
+#about {
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid var(--color03);
+  background-color: var(--bg-color);
+  border-radius: 8px;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Rodapé */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    border-top: 2px solid var(--color01);
+    padding: 2rem 1rem;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 992px) {
+    #container {
+      max-width: 500px;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+  }
+  
+  /* Responsividade do menu mobile */
+  
+  @media screen and (max-width: 580px) {
+    header #icon-menu,
+    header #navbar-inner #close-menu {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    header #navbar-inner #close-menu {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+    header #navbar-inner {
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--bg-color);
+      position: fixed;
+      top: 0;
+      left: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 40%;
+      text-align: center;
+      z-index: 10;
+      transition: .3s;
+    }
+    header #navbar-inner #navbar-list {
+      flex-direction: column;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    header #darkmode-container {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .show {left: 0 !important;}
+    .overflow {overflow: hidden !important;}
+  }
+  
+  @media screen and (max-width: 380px)  {
+    #side-bar {
+      flex: none;
+      width: 100%;
+    }
+    #search-bar form {flex-wrap: wrap;}
+    #search-bar form input {width: 100%;}
+  }
+  
